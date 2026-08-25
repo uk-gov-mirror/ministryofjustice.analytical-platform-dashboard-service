@@ -55,7 +55,7 @@ EOF
 
 ##### FINAL
 
-FROM public.ecr.aws/ubuntu/ubuntu:24.04@sha256:22a8228e1e48cbe7e0e0f2056e752ffb8a35950cda150a4e5e16417200bec648 AS runtime
+FROM public.ecr.aws/ubuntu/ubuntu:24.04@sha256:a54764b5b6340c272ffb45e303fe4c8064bbdfb76d732b325b79ae6b92900e4c AS runtime
 
 LABEL org.opencontainers.image.vendor="Ministry of Justice" \
       org.opencontainers.image.authors="Analytical Platform (analytical-platform@digital.justice.gov.uk)" \
@@ -111,6 +111,7 @@ apt-get install --quiet --yes \
     ncurses-base=6.4+20240113-1ubuntu2.1 \
     ncurses-bin=6.4+20240113-1ubuntu2.1 \
     gzip=1.12-1ubuntu3.2 \
+    perl-base=5.38.2-3.2ubuntu0.3 \
     ca-certificates
 apt-get clean --yes
 rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
